@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" preserve-order="true">
+    <test name="Chrome Test">
+        <groups>
+            <define name="Honda and SUV">
+                <include name="Honda"/>
+                <include name="SUV"/>
+                <include name="Sedan"/>
+            </define>
+            <run>
+                <include name="Honda and SUV"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.expedia.flightsbooking.TestNG_Grouping"/>
+        </classes>
+    </test>
+</suite>
